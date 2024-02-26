@@ -1,0 +1,13 @@
+.success-message {
+    font-family: "Roboto", sans-serif;
+    background-color: #3ff867;
+    padding: 15px;
+    color: white;
+  }
+
+.error-message {
+    font-family: "Roboto", sans-serif;
+    background-color: #f84b3f;
+    padding: 15px;
+    color: white;
+  }
