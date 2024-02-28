@@ -6,14 +6,29 @@ export const useAppState = () => useContext(AppStateContext);
 
 export const AppStateProvider = ({ children }) => {
   const [userEmail, setUserEmail] = useState("");
-  const [otherStateValue, setOtherStateValue] = useState("");
+  const [courses, setCourses] = useState([]);
+  const [rooms, setRooms] = useState([]);
+  const [teachers, setTeachers] = useState([]);
+  const [timeSlots, setTimeSlots] = useState([]);
 
   const handleSetUserEmail = (data) => {
     setUserEmail(data);
   };
 
-  const updateOtherStateValue = (value) => {
-    setOtherStateValue(value);
+  const handleSetCourses = (newCourses) => {
+    setCourses(newCourses);
+  };
+
+  const handleSetRooms = (newRooms) => {
+    setRooms(newRooms);
+  };
+
+  const handleSetTeachers = (newTeachers) => {
+    setTeachers(newTeachers);
+  };
+
+  const handleSetTimeSlots = (newTimeSlots) => {
+    setTimeSlots(newTimeSlots);
   };
 
   return (
@@ -21,8 +36,14 @@ export const AppStateProvider = ({ children }) => {
       value={{
         userEmail,
         handleSetUserEmail,
-        otherStateValue,
-        updateOtherStateValue,
+        courses,
+        handleSetCourses,
+        rooms,
+        handleSetRooms,
+        teachers,
+        handleSetTeachers,
+        timeSlots,
+        handleSetTimeSlots,
       }}>
       {children}
     </AppStateContext.Provider>

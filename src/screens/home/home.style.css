@@ -33,6 +33,12 @@
     margin-bottom: 10px; 
   }
 
+  .remove-button-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+  }
+
   .remove-button{
     background: #cf3f3f;
     color: white;
